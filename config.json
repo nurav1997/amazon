@@ -1,0 +1,63 @@
+{
+    "default-internal-time": 7200,
+    "send_Mode": 3,
+    "email": {
+        "smtp_url": "smtp.gmail.com:587",
+        "sender": "MAIL_ACCOUNT_ADDRESS",
+        "sender-password": "MAIL_ACCOUNT_PWD",
+        "receivers": [
+            "receiver-mail-address-1",
+            "receiver-mail-address-2"
+        ]
+    },
+    "IFTTT": {
+        "key": "IFTTT_KEY",
+        "eventName": "IFTTT_EVENT_NAME"
+    },
+    "Telegram": {
+        "botToken": "1509507452:AAHQH9CFBFAK_42YAOKL8DqsNIr6L7EcYvk",
+        "chatId": "1177062289"
+    },
+    "amazon-base_url": "https://www.amazon.in/dp/",
+    "xpath_selector": {
+        "price": "//*[@id='priceblock_ourprice']",
+        "productname": "//span[@id='productTitle']"
+    },
+    "item-to-parse": [
+        [
+            "B078KWWCTZ",
+            329,
+            "Adata V10 16GB Class 10 UHS-1 Micro SD Memory Card"
+        ],
+        [
+            "B07TD42S27",
+            3969,
+            "Raspberry Pi 4 Model B - 2GB RAM Computer Model"
+        ],
+        [
+            "B082ZQSHFZ",
+            467,
+            "PiBOX India Raspberry Pi 4 Case with Fan Dual"
+        ],
+        [
+            "B07CKDTBSL",
+            369,
+            "Strontium Nitro A1 32GB Micro SDHC Memory Card 100MB/s A1 UHS-I U1 Class 10 "
+        ],
+        [
+            "B06Y63B51W",
+            419,
+            "Samsung EVO Plus 32GB microSDHC UHS-I U1 95MB/s Full HD Memory Card with Adapter"
+        ],
+        [
+            "B014I8U33I",
+            499,
+            "AmazonBasics 6 Foot Micro HDMI-A to HDMI-D (NOT Micro-USB) Cable (Black)"
+        ],
+        [
+            "B01HQ2H6BA",
+            399,
+            "CableCreation Micro HDMI Male to HDMI Female Cable, Male to Female Micro-HDMI to HDMI Adapter, Support 1080P Full HD, 3D, 0.15M/0.5ft"
+        ]
+    ]
+}
