@@ -1,13 +1,12 @@
 {
     "default-internal-time": 7200,
-    "send_Mode": 3,
+    "send_Mode": 1,
     "email": {
-        "smtp_url": "smtp.gmail.com:587",
-        "sender": "MAIL_ACCOUNT_ADDRESS",
-        "sender-password": "MAIL_ACCOUNT_PWD",
+        "smtp_url": "smtp.hostinger.in:587",
+        "sender": "varun@varunkulkarni.space",
+        "sender-password": "Kulkarnivarun1997",
         "receivers": [
-            "receiver-mail-address-1",
-            "receiver-mail-address-2"
+            "kulkarnivarun1997@gmail.com"
         ]
     },
     "IFTTT": {

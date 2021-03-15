@@ -11,7 +11,7 @@ import urllib.parse
 import datetime
 import random
 import UserAgent
-import telegram
+# import telegram
 
 from copy import copy
 from lxml import html
@@ -60,8 +60,8 @@ def telegram_alert(msg_content):
     elif msg_content['code'] == 3:
         message = '😴' + msg_content['Content']
 
-    bot.send_message(chat_id=chatId, text=message)
-    print("Mesage posted to telegram:", chatId)
+    # bot.send_message(chat_id=chatId, text=message)
+    # print("Mesage posted to telegram:", chatId)
 
 
 def IFTTT_alert(msg_content):
@@ -95,7 +95,7 @@ def send_email(msg_content):
 
     try:
         # Try to login smtp server
-        s = smtplib.SMTP("smtp.gmail.com:587")
+        s = smtplib.SMTP("smtp.hostinger.in:587")
         s.ehlo()
         s.starttls()
         s.login(emailinfo['sender'], emailinfo['sender-password'])
@@ -135,8 +135,8 @@ def checkDayAndSendMail():
         dateIndex = end
         # send mail notifying server still working
         msg_content = {}
-        msg_content['Subject'] = 'Amazon Tracker Hey I am still working !'
-        msg_content['Content'] = 'Amazon Tracker still working until %s !' % (
+        msg_content['Subject'] = ' 🥱  Amazon Tracker Hey I am still working !'
+        msg_content['Content'] = ' 🥱 Amazon Tracker still working until %s !' % (
             todayDate.strftime('%Y-%m-%d %H:%M:%S'))
         msg_content['Price'] = ""
         msg_content['Time'] = todayDate.strftime('%Y-%m-%d %H:%M:%S')
@@ -182,8 +182,8 @@ def get_price(url, selector):
         # be banned, send mail then shut down
         # send mail notifying server shutdown
         msg_content = {}
-        msg_content['Subject'] = 'Amazon Tracker Server be banned !'
-        msg_content['Content'] = 'Amazon Price Alert be banned at %s !' % (
+        msg_content['Subject'] = '😴  Amazon Tracker Server be banned !'
+        msg_content['Content'] = '😴  Amazon Price Alert be banned at %s !' % (
             datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         msg_content['Price'] = ""
         msg_content['Time'] = ""
@@ -238,8 +238,8 @@ def main():
     chatId = config['Telegram']['chatId']
 
     # initialize telegram bot
-    if send_Mode == 3:
-        bot = telegram.Bot(botToken)
+    # if send_Mode == 3:
+    # bot = telegram.Bot(botToken)
 
     # get all items to parse
     items = config['item-to-parse']
@@ -272,9 +272,9 @@ def main():
                 print('[#%02d] %s\'s price is %s!! Trying to send email.' %
                       (itemIndex, productName, price))
                 msg_content = {}
-                msg_content['Subject'] = '[Amazon] %s Price Alert - %s' % (
+                msg_content['Subject'] = '🥳 PRICE DROPPED %s Price Alert - %s' % (
                     productName, price)
-                msg_content['Content'] = '[%s]\nThe price is currently %s !!\nURL to salepage: %s' % (
+                msg_content['Content'] = '🥳 [%s]\nThe DROPPED price is currently %s !!\nURL to salepage: %s' % (
                     nowtime_Str, price, item_page_url)
                 msg_content['Price'] = price
                 msg_content['URL'] = item_page_url
